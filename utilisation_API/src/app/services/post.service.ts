@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Post } from '../models/post.model';
-import { Comment } from '../models/comment.model';  // Assurez-vous d'importer le modèle Comment
+import { Comment } from '../models/comment.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class PostService {
     return this.http.get<Post>(`${this.apiUrl}/${id}`);
   }
 
-  // Méthode pour récupérer les commentaires associés à un post
+
   getCommentsByPostId(postId: number): Observable<Comment[]> {
     return this.http.get<Comment[]>(`${this.commentsApiUrl}?postId=${postId}`);
   }

@@ -44,7 +44,7 @@ export class PostDetailComponent implements OnInit {
           const author = users.find(u => u.email === comment.email); // JSONPlaceholder doesn't give userId in comments
           return {
             ...comment,
-            authorName: author?.name || 'Auteur inconnu'
+            authorName: author?.name ||comment.email ||'Auteur inconnu'
           };
         });
       });

@@ -57,8 +57,9 @@ h3 {
 .user-post-item,
 .user-item,
 .user-posts-section,
+.comment-card,
 .post-box {
-  max-width: 1500px;
+  max-width: 1800px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 1.5rem;
@@ -124,9 +125,8 @@ p {
 }
 
 /* ============ LISTS ============ */
-ul {
-  max-width: 1500px;
-  margin: 2rem auto;
+.user-list,.user-posts-list {
+  margin: 1rem auto;
   padding: 0 2rem;
 }
 
