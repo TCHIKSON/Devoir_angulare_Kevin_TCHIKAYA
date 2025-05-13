@@ -1,0 +1,18 @@
+<h1 class="page-title">Détails de l'utilisateur</h1>
+<div class="user-detail-container" *ngIf="user">
+  <div class="user-card">
+    <p><strong>Nom :</strong> {{ user.name }}</p>
+    <p><strong>Email :</strong> {{ user.email }}</p>
+    <p><strong>Téléphone :</strong> {{ user.phone }}</p>
+    <p><strong>Site :</strong> {{ user.website }}</p>
+  </div>
+
+  <div class="user-posts-section">
+    <h3 class="posts-heading">Posts de {{ user?.name }}</h3>
+    <ul class="user-posts-list">
+      <li *ngFor="let post of posts" (click)="goToPost(post.id)" class="user-post-item">
+        {{ post.title }}
+      </li>
+    </ul>
+  </div>
+</div>

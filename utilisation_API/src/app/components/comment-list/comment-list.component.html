@@ -1,0 +1,15 @@
+<div class="comments-container" *ngIf="comments.length > 0; else noComments">
+<h1 class="page-title">Liste des commentaires</h1>
+
+  <div class="comment-card" *ngFor="let comment of comments">
+    <div class="comment-header">
+      <strong>{{ comment.name }}</strong>
+      <span class="comment-email">&lt;{{ comment.email }}&gt;</span>
+    </div>
+    <p class="comment-body">{{ comment.body }}</p>
+  </div>
+</div>
+
+<ng-template #noComments>
+  <p>Aucun commentaire trouvé.</p>
+</ng-template>

@@ -1,0 +1,221 @@
+/* ============ RESET ============ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1c1e21;
+  line-height: 1.6;
+}
+
+/* ============ CONTAINERS ============ */
+.container,
+.posts-container,
+.user-detail-container,
+.comments-section,
+.post-container {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* ============ HEADINGS ============ */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #1c1e21;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.section-title {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ============ GLOBAL CARD ============ */
+.card,
+.user-card,
+.post-card,
+.comment,
+.user-post-item,
+.user-item,
+.user-posts-section,
+.post-box {
+  max-width: 1500px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+
+}
+
+.card:hover,
+.user-item:hover,
+.user-post-item:hover,
+.post-card:hover,
+.comment:hover {
+  background-color: #f9f9f9f4;
+}
+
+/* ============ TEXT STYLES ============ */
+p {
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+.post-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1c1e21;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+}
+
+.post-body {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ============ AUTHOR & USER INFO ============ */
+.post-author,
+.user-email,
+.comment-email {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.post-author-name,
+.user-name,
+.comment-author {
+  font-weight: 600;
+  color: #1877f2;
+  cursor: pointer;
+}
+
+.post-author-name:hover,
+.user-name:hover,
+.comment-author:hover {
+  text-decoration: underline;
+}
+
+/* ============ LISTS ============ */
+ul {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* ============ COMMENTS ============ */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-body {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.no-comments {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* ============ NAVBAR ============ */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin-right: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #1877f2;
+}
+
+/* ============ CLICKABLE ============ */
+a,
+.clickable {
+  color: #1877f2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+a:hover,
+.clickable:hover {
+  color: #125dc1;
+  text-decoration: underline;
+}
+
+/* ============ AVATAR ============ */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1877f2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+/* ============ DESKTOP OPTIMIZATION ============ */
+@media (min-width: 1200px) {
+  .container,
+  .post-container,
+  .comments-section,
+  .user-detail-container {
+    max-width: 1000px;
+  }
+}
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: #1c1e21;
+}

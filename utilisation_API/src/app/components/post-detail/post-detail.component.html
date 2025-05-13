@@ -1,0 +1,28 @@
+<div class="post-container" *ngIf="post">
+  <h1 class="page-title">Details des poste</h1>
+
+  <div class="post-box">
+    <div class="post-header">
+      <h2 class="post-title">{{ post.title }}</h2>
+    </div>
+    <div class="post-body">{{ post.body }}</div>
+  </div>
+</div>
+
+<div class="comments-section">
+  <h3 class="section-title">Commentaires</h3>
+
+  <div *ngIf="comments.length > 0; else noComments">
+    <div class="comment" *ngFor="let comment of comments">
+      <div class="comment-header">
+        <span class="comment-author">{{ comment.authorName }}</span>
+        <span class="comment-email">{{ comment.email }}</span>
+      </div>
+      <div class="comment-body">{{ comment.body }}</div>
+    </div>
+  </div>
+
+  <ng-template #noComments>
+    <p class="no-comments">Aucun commentaire disponible.</p>
+  </ng-template>
+</div>

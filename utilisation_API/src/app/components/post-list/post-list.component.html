@@ -1,0 +1,19 @@
+<div class="posts-container">
+  <h1 class="page-title">Liste des postes</h1>
+
+
+  <div class="post-card" *ngFor="let post of posts">
+    <h3 class="post-title" (click)="goToPost(post.id)">
+      {{ post.title }}
+    </h3>
+
+    <p class="post-body">{{ post.body }}</p>
+
+    <p class="post-author">
+      Auteur :
+      <span (click)="goToUser(post.authorId!)" class="post-author-name">
+        {{ post.authorName }}
+      </span>
+    </p>
+  </div>
+</div>
