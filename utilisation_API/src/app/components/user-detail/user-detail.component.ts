@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { UserService } from '../../services/user.service';
 import { PostService } from '../../services/post.service';
@@ -9,7 +10,7 @@ import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-user-detail',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './user-detail.component.html',
   standalone: true
 })
@@ -40,4 +41,7 @@ export class UserDetailComponent implements OnInit {
   goToPost(postId: number) {
     this.router.navigate(['/posts', postId]);
   }
+  goBack(): void {
+  this.router.navigate(['/users']);
+}
 }

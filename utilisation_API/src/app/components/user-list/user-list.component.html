@@ -2,6 +2,9 @@
 <h1 class="page-title">Liste des utilisateurs</h1>
 <div class="user-list"
 
-  *ngFor="let user of users" (click)="goToDetails(user.id)" class="user-item">
-    <span class="user-name">{{ user.name }}</span> – <span class="user-email">{{ user.email }}</span>
+  *ngFor="let user of users"  class="user-item">
+    <div class="namUser"><span class="user-name" (click)="goToDetails(user.id)">{{ user.name }}</span> </div> ✉ <span class="user-email">{{ user.email }}</span>
+    <div class="button_container-35"> <button (click)="goToDetails(user.id)" class="button-37">
+ Details utilisateur
+        </button></div>
   </div>

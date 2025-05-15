@@ -1,5 +1,5 @@
 <div class="post-container" *ngIf="post">
-  <h1 class="page-title">Details des poste</h1>
+  <h1 class="page-title">Details du poste</h1>
 
   <div class="post-box">
     <div class="post-header">
@@ -7,6 +7,17 @@
     </div>
     <div class="post-body">{{ post.body }}</div>
   </div>
+<div class="header-actions">
+  <span (click)="goToUser(post.authorId!)" class="post-author-name-back">
+    ⟵ Retourner sur {{ post.authorName }}
+  </span>
+
+  <button class="button-37" (click)="goToPosts()">
+    Voir tous les postes
+  </button>
+</div>
+
+
 </div>
 
 <div class="comments-section">

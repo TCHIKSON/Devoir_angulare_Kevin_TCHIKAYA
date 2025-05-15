@@ -3,11 +3,14 @@
 
 
   <div class="post-card" *ngFor="let post of posts">
-    <h3 class="post-title" (click)="goToPost(post.id)">
+     <p><strong>Titre : </strong> </p> <h3 class="post-title" (click)="goToPost(post.id)">
       {{ post.title }}
     </h3>
 
     <p class="post-body">{{ post.body }}</p>
+    <div class="button_container-37"><button (click)="goToPost(post.id)" class="button-37">
+ Lire le poste
+        </button></div>
 
     <p class="post-author">
       Auteur :

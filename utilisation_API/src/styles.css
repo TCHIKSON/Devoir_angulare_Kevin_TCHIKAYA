@@ -11,6 +11,37 @@ body {
   color: #1c1e21;
   line-height: 1.6;
 }
+.back-button{
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  margin-bottom: 1.5rem;
+  
+}
+
 
 /* ============ CONTAINERS ============ */
 .container,
@@ -109,27 +140,46 @@ p {
   color: #888;
   font-style: italic;
 }
-
+.post-author-name-back{
+  font-weight: 600;
+  color: #1877f2;
+  cursor: pointer;
+  text-align: left;
+}
 .post-author-name,
-.user-name,
-.comment-author {
+.user-name{
   font-weight: 600;
   color: #1877f2;
   cursor: pointer;
 }
+.comment-author {
+  font-weight: 600;
+  color: #7221f3;
 
-.post-author-name:hover,
-.user-name:hover,
-.comment-author:hover {
+}
+.post-author-name-back:hover{
   text-decoration: underline;
 }
+.post-author-name:hover,
+.user-name:hover{
+  text-decoration: underline;
+}
+
 
 /* ============ LISTS ============ */
 .user-list,.user-posts-list {
   margin: 1rem auto;
   padding: 0 2rem;
 }
-
+.comUserDetail :hover{
+  text-decoration: underline;
+}
+.comUserDetail{
+  color: #1877f2;
+  text-align: right;
+  cursor: pointer;
+  font-weight: 600;
+}
 /* ============ COMMENTS ============ */
 .comment-header {
   display: flex;
@@ -189,20 +239,48 @@ a:hover,
   text-decoration: underline;
 }
 
-/* ============ AVATAR ============ */
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #1877f2;
-  color: white;
+.header-actions {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-right: 10px;
+  margin-bottom: 1rem;
 }
+
+
+.button_container-37{
+   text-align: right;
+}
+.button_container-35{
+  display: flex;
+  justify-content: flex-end
+}
+.button-37 {
+  background-color: #71d299;
+  border: 1px solid #71d299;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: right;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
 
 /* ============ DESKTOP OPTIMIZATION ============ */
 @media (min-width: 1200px) {
@@ -211,6 +289,11 @@ a:hover,
   .comments-section,
   .user-detail-container {
     max-width: 1000px;
+  }
+}
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
   }
 }
 .page-title {
